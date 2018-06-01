@@ -28,10 +28,11 @@ class Main extends Component {
   checkErc20Address = () => {
     const { erc20Value } = this.state;
 
-    const erc20AddressHasError = !isErc20Valid(erc20Value);
+    const erc20Validilidation = isErc20Valid(erc20Value);
+
     this.setState({
-      erc20AddressHasError,
-      erc20AddressIsValid: !erc20AddressHasError
+      erc20AddressHasError: !erc20Validilidation,
+      erc20AddressIsValid: erc20Validilidation
     });
   }
 
